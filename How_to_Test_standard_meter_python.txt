@@ -1,0 +1,1 @@
+python standard_meter.py --path "C:\Users\C7758024\Documents\0_Github\stm32_project_cubemx\Test"
