@@ -32,7 +32,12 @@ public:
     int calculation_result;
     int add_number(int add_a, int add_b);
     int sub_number(int sub_a, int sub_b);
+    float square(volatile int *p);
 };
+float calculation::square(volatile int *p){
+
+    return *p * *p;
+}
 
 int calculation::add_number(int add_a, int add_b)
 {
@@ -50,7 +55,8 @@ int main(void)
 
     calculation cal;
     
-
+    while (1) {
+    
     /* Loop forever */
     cal.calculation_result= cal.add_number(1, 2);
 
@@ -60,5 +66,9 @@ int main(void)
 
     cal.calculation_result = cal.sub_number(2, 1 );
 
+    cal.calculation_result = cal.square((volatile int *)2);
+
+
+    }
 }
 
